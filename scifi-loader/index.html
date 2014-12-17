@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <style>
+    @keyframes pulsate {
+      from { text-shadow: -1px 1px 2px #080, 1px -1px 2px #080; }
+      to { text-shadow: -1px 1px 8px #0f0, 1px -1px 8px #8f8; }
+    }
+
+    @-webkit-keyframes pulsate {
+      from { text-shadow: -1px 1px 2px #080, 1px -1px 2px #080; }
+      to { text-shadow: -1px 1px 8px #0f0, 1px -1px 8px #8f8; }
+    }
+
+    @font-face {
+      font-family: 'Tr2n';
+      src: url('Tr2n.ttf') format('truetype');
+    }
+
+    html, body {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+
+      height: 100%;
+      height: 100vh;
+
+      font-family: 'Tr2n', arial, helvetica, sans-serif;
+      color: #060;
+      background: black;
+    }
+
+    #loading {
+      position: absolute;
+
+      width: 100%;
+      width: 100vw;
+
+      height: 100%;
+      height: 100vh;
+
+      /* Image source http://i280.photobucket.com/albums/kk186/Richishot/flow1.gif */
+      background-image:url('loading_bg.gif');
+      background-size: cover;
+      text-align: center;
+    }
+
+    h1 {
+      position: absolute;
+      color: #060;
+      text-shadow: -1px 1px 8px #0f0, 1px -1px 8px #8f8;
+
+      font-size: 20em;
+      font-size: 20vmin;
+
+      animation-name: pulsate;
+      animation-duration: 2s;
+      animation-direction: alternate;
+
+      -webkit-animation-name: pulsate;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-direction: alternate;
+      -webkit-animation-iteration-count: infinite;
+
+      top: 50%;
+      top: 50vh;
+
+      width: 100%;
+
+      margin-top: -10em;
+      margin-top: -10vmin;
+    }
+    
+    p {
+      position: absolute;
+      color: #fff;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 100%;
+      bottom: 1em;
+      text-align: center;
+    }
+    
+    a, a:visited { color: #0f0; }
+  </style>
+</head>
+<body>
+  <div id="loading">
+    <h1>LOADING</h1>
+    <p>
+      Font &quot;<a href="http://www.dafont.com/de/tr2n.font">Tr2n</a>&quot; by Jeff Bell, 
+      Background by <a href="http://i280.photobucket.com/albums/kk186/Richishot/flow1.gif">Richishot</a>
+      <a href="view-source:index.html">View source</a>
+    </p>
+  </div>
+</body>
+</html>
