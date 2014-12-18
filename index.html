@@ -10,9 +10,14 @@
         font-family: sans-serif;
         text-align: center;
       }
+      
+      .demos {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;        
+      }
 
       .demo {
-        float: left;
         position: relative;
         width:  20%;
         width:  20vw;
@@ -27,7 +32,11 @@
       }
 
       .demo:hover {
-        width: 22%;
+        width:  22%;
+        width:  22vw;
+
+        height: 22%;
+        height: 22vw;
       }
 
       h3 {
@@ -55,17 +64,18 @@
   <body>
     <h1>Exposition</h1>
     <h2>A list of small, weird experiments.</h2>
-
-    <a href="scifi-loader/">
-      <div class="demo" style="background-image:url('scifi-loader/preview.png');">
-        <h3>Sci-Fi Loader</h3>
-      </div>
-    </a>
-
-    <a href="gauges/">
-      <div class="demo">
-        <h3>Gauges</h3>
-      </div>
-    </a>
+    <div class="demos">
+      <a href="scifi-loader/">
+        <div class="demo" style="background-image:url('scifi-loader/preview.png');">
+          <h3>Sci-Fi Loader</h3>
+        </div>
+      </a>
+  
+      <a href="gauges/">
+        <div class="demo" style="background-image:url('gauges/preview.png');">
+          <h3>Gauges</h3>
+        </div>
+      </a>
+    </div>
   </body>
 </html>
