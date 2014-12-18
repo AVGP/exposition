@@ -1,0 +1,115 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  
+  position: relative; 
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.container {
+  border: 1px solid black;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+}
+
+/* half gauges */
+
+.half-gauge, .full-gauge {
+  position: absolute;
+
+  border: 1px solid red;
+  border-radius: 50px;
+
+  top:  10px;
+  left: 10px;
+
+  width:  100px;
+  height: 100px;
+}
+
+.half-gauge {
+  border-radius: 50px 50px 0 0;
+
+  top:  37px;
+  left: 10px;
+
+  height: 50px;
+}
+
+.needle {
+  position: absolute;
+  left:   50px;
+  top:     0px;
+
+  width:   1px;
+  height: 50px;
+  
+  border-left: 1px solid green;
+  box-sizing: border-box;
+  
+  transform-origin: center bottom;
+  transform:rotate(-90deg);
+  
+  animation-name: fill;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.half-gauge .needle {
+  animation-name: half-fill;
+}
+
+/* styled gauges */
+
+.bgpattern {
+  background-image: url('http://wallpoper.com/images/00/37/83/34/patterns-textures_00378334.jpg');
+  background-size: 200%;
+  border: none;
+}
+
+.bgpattern .needle {
+  width: 2px;
+  height: 48px;
+  box-shadow: 0px 0px 1px 1px #0af;
+}
+
+.vertical {
+  transform-origin: center;
+  transform:rotate(90deg);
+}
+
+
+/* Animations for the needle */
+
+@keyframes half-fill {
+  from {
+    transform:rotate(-90deg);
+  }
+
+  to {
+    transform:rotate(90deg);
+  }
+}
+
+@keyframes fill {
+  from {
+    transform:rotate(0deg);
+  }
+
+  to {
+    transform:rotate(360deg);
+  }
+}
