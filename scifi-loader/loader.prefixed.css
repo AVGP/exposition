@@ -56,6 +56,8 @@ h1 {
           animation-duration: 2s;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 
   top: 50%;
   top: 50vh;

@@ -47,6 +47,7 @@ h1 {
   animation-name: pulsate;
   animation-duration: 2s;
   animation-direction: alternate;
+  animation-iteration-count: infinite;
 
   top: 50%;
   top: 50vh;
