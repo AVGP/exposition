@@ -81,20 +81,29 @@ h1, h2, h3, h4 {
 }
 
 #cursor {
-  -webkit-animation: blink 0.75s linear infinite;
+  animation: blink 0.75s linear infinite;
 }
 
 a, a:visited {
   color: #8a0;
 }
 
-@-webkit-keyframes scan {
+@keyframes scan {
   0%   { top: 0%;}
   100% { top: 100%;}
 }
 
-@-webkit-keyframes blink {
-  0%   { color: #0a0; }
-  50%  { color: #000; }
-  100% { color: #0a0; }
+@keyframes blink {
+  0%   {
+    color: #0a0;
+    text-shadow: #0f0 0px 0px 5px;
+  }
+  50%  {
+    color: #000;
+    text-shadow: #000 0px 0px 5px;
+  }
+  100% {
+    color: #0a0;
+    text-shadow: #0f0 0px 0px 5px;
+  }
 }
