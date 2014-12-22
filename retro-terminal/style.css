@@ -28,7 +28,7 @@
 body {
   background: black;
   color:      #0a0;
-
+  text-shadow: #0f0 0px 0px 5px;
   font-family: blankregular, monospace;
 
   position: relative;
